@@ -6,18 +6,26 @@ struct FullscreenViewerFeature: ReducerProtocol {
     
     struct State: Equatable {
         var images: IdentifiedArrayOf<RemoteImage> = []
+        @BindingState var selectedImage: RemoteImage
     }
     
-    enum Action: Equatable {
+    enum Action: BindableAction, Equatable {
+        case binding(BindingAction<State>)
         case didTapBack
     }
     
-    func reduce(into state: inout State, action: Action) -> EffectTask<Action> {
-        switch action {
-        case .didTapBack:
-            return .none
+    var body: some ReducerProtocol<State, Action> {
+        BindingReducer()
+        Reduce { state, action in
+            switch action {
+            case .binding:
+                return .none
+                
+            case .didTapBack:
+                return .none
+            }
         }
-    }
+    }    
 }
 
 
@@ -27,7 +35,7 @@ struct FullscreenViewer_View: View {
     var body: some View {
         WithViewStore(self.store, observe: { $0 }) { viewStore in
             NavigationView {
-                TabView {
+                TabView(selection: viewStore.binding(\.$selectedImage)) {
                     ForEach(viewStore.images) { image in
                         AsyncImage(url: image.url) { phase in
                             switch phase {
@@ -44,6 +52,7 @@ struct FullscreenViewer_View: View {
                                 EmptyView()
                             }
                         }
+                        .tag(image)
                     }
                 }
                 .background(Color.black)

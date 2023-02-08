@@ -1,6 +1,6 @@
 import Foundation
 
-struct RemoteImage: Equatable, Identifiable, Codable {
+struct RemoteImage: Equatable, Identifiable, Codable, Hashable {
     var id: String
     var url: URL
     
