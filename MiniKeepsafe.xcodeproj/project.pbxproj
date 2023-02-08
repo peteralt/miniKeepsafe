@@ -18,6 +18,7 @@
 		8AFFC85429941BB1003CBB1F /* GridViewFeature+Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFFC85329941BB1003CBB1F /* GridViewFeature+Mocks.swift */; };
 		8AFFC85829941CB4003CBB1F /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFFC85729941CB4003CBB1F /* APIClient.swift */; };
 		8AFFC85A2994410C003CBB1F /* RemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFFC8592994410C003CBB1F /* RemoteImage.swift */; };
+		8AFFC8602994420C003CBB1F /* GridViewFeature+Domain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFFC85F2994420C003CBB1F /* GridViewFeature+Domain.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		8AFFC85329941BB1003CBB1F /* GridViewFeature+Mocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GridViewFeature+Mocks.swift"; sourceTree = "<group>"; };
 		8AFFC85729941CB4003CBB1F /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		8AFFC8592994410C003CBB1F /* RemoteImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImage.swift; sourceTree = "<group>"; };
+		8AFFC85F2994420C003CBB1F /* GridViewFeature+Domain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GridViewFeature+Domain.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				8AFFC84E29940D89003CBB1F /* GridViewFeature+View.swift */,
+				8AFFC85F2994420C003CBB1F /* GridViewFeature+Domain.swift */,
 				8AFFC85329941BB1003CBB1F /* GridViewFeature+Mocks.swift */,
 			);
 			path = GridViewFeature;
@@ -311,6 +314,7 @@
 				8AFFC82329940D43003CBB1F /* MiniKeepsafeApp.swift in Sources */,
 				8AFFC85429941BB1003CBB1F /* GridViewFeature+Mocks.swift in Sources */,
 				8AFFC85829941CB4003CBB1F /* APIClient.swift in Sources */,
+				8AFFC8602994420C003CBB1F /* GridViewFeature+Domain.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
