@@ -11,8 +11,6 @@
 		8AFFC82729940D44003CBB1F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AFFC82629940D44003CBB1F /* Assets.xcassets */; };
 		8AFFC82A29940D44003CBB1F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AFFC82929940D44003CBB1F /* Preview Assets.xcassets */; };
 		8AFFC83429940D44003CBB1F /* MiniKeepsafeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFFC83329940D44003CBB1F /* MiniKeepsafeTests.swift */; };
-		8AFFC83E29940D44003CBB1F /* MiniKeepsafeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFFC83D29940D44003CBB1F /* MiniKeepsafeUITests.swift */; };
-		8AFFC84029940D44003CBB1F /* MiniKeepsafeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFFC83F29940D44003CBB1F /* MiniKeepsafeUITestsLaunchTests.swift */; };
 		8AFFC84F29940D89003CBB1F /* GridViewFeature+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFFC84E29940D89003CBB1F /* GridViewFeature+View.swift */; };
 		8AFFC85229940E73003CBB1F /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 8AFFC85129940E73003CBB1F /* ComposableArchitecture */; };
 		8AFFC85429941BB1003CBB1F /* GridViewFeature+Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFFC85329941BB1003CBB1F /* GridViewFeature+Mocks.swift */; };
@@ -51,8 +49,6 @@
 		8AFFC82F29940D44003CBB1F /* MiniKeepsafeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MiniKeepsafeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AFFC83329940D44003CBB1F /* MiniKeepsafeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniKeepsafeTests.swift; sourceTree = "<group>"; };
 		8AFFC83929940D44003CBB1F /* MiniKeepsafeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MiniKeepsafeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8AFFC83D29940D44003CBB1F /* MiniKeepsafeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniKeepsafeUITests.swift; sourceTree = "<group>"; };
-		8AFFC83F29940D44003CBB1F /* MiniKeepsafeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniKeepsafeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		8AFFC84E29940D89003CBB1F /* GridViewFeature+View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GridViewFeature+View.swift"; sourceTree = "<group>"; };
 		8AFFC85329941BB1003CBB1F /* GridViewFeature+Mocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GridViewFeature+Mocks.swift"; sourceTree = "<group>"; };
 		8AFFC85729941CB4003CBB1F /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
@@ -96,7 +92,6 @@
 			children = (
 				8AFFC82129940D43003CBB1F /* MiniKeepsafe */,
 				8AFFC83229940D44003CBB1F /* MiniKeepsafeTests */,
-				8AFFC83C29940D44003CBB1F /* MiniKeepsafeUITests */,
 				8AFFC82029940D43003CBB1F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -140,15 +135,6 @@
 				8AFFC83329940D44003CBB1F /* MiniKeepsafeTests.swift */,
 			);
 			path = MiniKeepsafeTests;
-			sourceTree = "<group>";
-		};
-		8AFFC83C29940D44003CBB1F /* MiniKeepsafeUITests */ = {
-			isa = PBXGroup;
-			children = (
-				8AFFC83D29940D44003CBB1F /* MiniKeepsafeUITests.swift */,
-				8AFFC83F29940D44003CBB1F /* MiniKeepsafeUITestsLaunchTests.swift */,
-			);
-			path = MiniKeepsafeUITests;
 			sourceTree = "<group>";
 		};
 		8AFFC85B29944190003CBB1F /* GridViewFeature */ = {
@@ -366,8 +352,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8AFFC83E29940D44003CBB1F /* MiniKeepsafeUITests.swift in Sources */,
-				8AFFC84029940D44003CBB1F /* MiniKeepsafeUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
