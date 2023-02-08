@@ -22,6 +22,7 @@
 		8AFFC863299443A7003CBB1F /* FullscreenViewer+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFFC862299443A7003CBB1F /* FullscreenViewer+View.swift */; };
 		8AFFC865299444F7003CBB1F /* FullscreenViewer+Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFFC864299444F7003CBB1F /* FullscreenViewer+Mocks.swift */; };
 		8AFFC86729944CA8003CBB1F /* FullscreenViewerFeature+Domain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFFC86629944CA8003CBB1F /* FullscreenViewerFeature+Domain.swift */; };
+		8AFFC86A29944F36003CBB1F /* PinScreenFeature+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFFC86929944F36003CBB1F /* PinScreenFeature+View.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		8AFFC862299443A7003CBB1F /* FullscreenViewer+View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FullscreenViewer+View.swift"; sourceTree = "<group>"; };
 		8AFFC864299444F7003CBB1F /* FullscreenViewer+Mocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FullscreenViewer+Mocks.swift"; sourceTree = "<group>"; };
 		8AFFC86629944CA8003CBB1F /* FullscreenViewerFeature+Domain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FullscreenViewerFeature+Domain.swift"; sourceTree = "<group>"; };
+		8AFFC86929944F36003CBB1F /* PinScreenFeature+View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PinScreenFeature+View.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 		8AFFC82129940D43003CBB1F /* MiniKeepsafe */ = {
 			isa = PBXGroup;
 			children = (
+				8AFFC86829944F25003CBB1F /* PinScreenFeature */,
 				8AFFC8612994438F003CBB1F /* FullscreenViewerFeature */,
 				8AFFC85E299441B3003CBB1F /* Assets */,
 				8AFFC85D299441A6003CBB1F /* Models */,
@@ -188,6 +191,14 @@
 				8AFFC864299444F7003CBB1F /* FullscreenViewer+Mocks.swift */,
 			);
 			path = FullscreenViewerFeature;
+			sourceTree = "<group>";
+		};
+		8AFFC86829944F25003CBB1F /* PinScreenFeature */ = {
+			isa = PBXGroup;
+			children = (
+				8AFFC86929944F36003CBB1F /* PinScreenFeature+View.swift */,
+			);
+			path = PinScreenFeature;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -331,6 +342,7 @@
 				8AFFC82329940D43003CBB1F /* MiniKeepsafeApp.swift in Sources */,
 				8AFFC85429941BB1003CBB1F /* GridViewFeature+Mocks.swift in Sources */,
 				8AFFC865299444F7003CBB1F /* FullscreenViewer+Mocks.swift in Sources */,
+				8AFFC86A29944F36003CBB1F /* PinScreenFeature+View.swift in Sources */,
 				8AFFC85829941CB4003CBB1F /* APIClient.swift in Sources */,
 				8AFFC8602994420C003CBB1F /* GridViewFeature+Domain.swift in Sources */,
 				8AFFC863299443A7003CBB1F /* FullscreenViewer+View.swift in Sources */,

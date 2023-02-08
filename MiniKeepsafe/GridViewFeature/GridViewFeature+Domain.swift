@@ -25,6 +25,7 @@ struct GridViewFeature: ReducerProtocol {
     }
     
     enum Action: BindableAction, Equatable {
+        case didAppear
         case binding(BindingAction<State>)
         case didReachEndOfList
         case images(TaskResult<[RemoteImage]>)
@@ -38,6 +39,17 @@ struct GridViewFeature: ReducerProtocol {
             switch action {
             case .binding:
                 return .none
+                
+            case .didAppear:
+                state.isLoading = true
+                state.currentPage = 1
+                return .task { [state] in
+                    return await .images(TaskResult {
+                        try await apiClient
+                            .fetchImages(state.currentPage, state.imageLimit)
+                    })
+                }
+                .cancellable(id: APIRequestCancellationID.self)
                 
             case .didReachEndOfList:
                 state.isLoading = true

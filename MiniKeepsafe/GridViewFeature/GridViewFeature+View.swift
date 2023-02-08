@@ -64,14 +64,17 @@ struct GridViewFeature_View: View {
             }
             .fullScreenCover(
                 isPresented: viewStore.binding(\.$isFullscreenViewerPresented)) {
-                IfLetStore(
-                    store.scope(
-                        state: \.fullscreenState,
-                        action: GridViewFeature.Action.fullscreenFeature),
-                    then: {
-                        FullscreenViewer_View(store: $0)
-                })
-            }
+                    IfLetStore(
+                        store.scope(
+                            state: \.fullscreenState,
+                            action: GridViewFeature.Action.fullscreenFeature),
+                        then: {
+                            FullscreenViewer_View(store: $0)
+                        })
+                }
+                .onAppear {
+                    viewStore.send(.didAppear)
+                }
         }
     }
 }
