@@ -14,6 +14,10 @@
 		8AFFC83429940D44003CBB1F /* MiniKeepsafeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFFC83329940D44003CBB1F /* MiniKeepsafeTests.swift */; };
 		8AFFC83E29940D44003CBB1F /* MiniKeepsafeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFFC83D29940D44003CBB1F /* MiniKeepsafeUITests.swift */; };
 		8AFFC84029940D44003CBB1F /* MiniKeepsafeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFFC83F29940D44003CBB1F /* MiniKeepsafeUITestsLaunchTests.swift */; };
+		8AFFC84F29940D89003CBB1F /* GridViewFeature+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFFC84E29940D89003CBB1F /* GridViewFeature+View.swift */; };
+		8AFFC85229940E73003CBB1F /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 8AFFC85129940E73003CBB1F /* ComposableArchitecture */; };
+		8AFFC85429941BB1003CBB1F /* GridViewFeature+Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFFC85329941BB1003CBB1F /* GridViewFeature+Mocks.swift */; };
+		8AFFC85629941BE8003CBB1F /* GridViewFeature+Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFFC85529941BE8003CBB1F /* GridViewFeature+Models.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +48,9 @@
 		8AFFC83929940D44003CBB1F /* MiniKeepsafeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MiniKeepsafeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AFFC83D29940D44003CBB1F /* MiniKeepsafeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniKeepsafeUITests.swift; sourceTree = "<group>"; };
 		8AFFC83F29940D44003CBB1F /* MiniKeepsafeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniKeepsafeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8AFFC84E29940D89003CBB1F /* GridViewFeature+View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GridViewFeature+View.swift"; sourceTree = "<group>"; };
+		8AFFC85329941BB1003CBB1F /* GridViewFeature+Mocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GridViewFeature+Mocks.swift"; sourceTree = "<group>"; };
+		8AFFC85529941BE8003CBB1F /* GridViewFeature+Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GridViewFeature+Models.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AFFC85229940E73003CBB1F /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,6 +104,9 @@
 			children = (
 				8AFFC82229940D43003CBB1F /* MiniKeepsafeApp.swift */,
 				8AFFC82429940D43003CBB1F /* ContentView.swift */,
+				8AFFC84E29940D89003CBB1F /* GridViewFeature+View.swift */,
+				8AFFC85529941BE8003CBB1F /* GridViewFeature+Models.swift */,
+				8AFFC85329941BB1003CBB1F /* GridViewFeature+Mocks.swift */,
 				8AFFC82629940D44003CBB1F /* Assets.xcassets */,
 				8AFFC82829940D44003CBB1F /* Preview Content */,
 			);
@@ -143,6 +154,9 @@
 			dependencies = (
 			);
 			name = MiniKeepsafe;
+			packageProductDependencies = (
+				8AFFC85129940E73003CBB1F /* ComposableArchitecture */,
+			);
 			productName = MiniKeepsafe;
 			productReference = 8AFFC81F29940D43003CBB1F /* MiniKeepsafe.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +229,9 @@
 				Base,
 			);
 			mainGroup = 8AFFC81629940D43003CBB1F;
+			packageReferences = (
+				8AFFC85029940E73003CBB1F /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+			);
 			productRefGroup = 8AFFC82029940D43003CBB1F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -258,7 +275,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				8AFFC82529940D43003CBB1F /* ContentView.swift in Sources */,
+				8AFFC84F29940D89003CBB1F /* GridViewFeature+View.swift in Sources */,
 				8AFFC82329940D43003CBB1F /* MiniKeepsafeApp.swift in Sources */,
+				8AFFC85429941BB1003CBB1F /* GridViewFeature+Mocks.swift in Sources */,
+				8AFFC85629941BE8003CBB1F /* GridViewFeature+Models.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -577,6 +597,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8AFFC85029940E73003CBB1F /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8AFFC85129940E73003CBB1F /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8AFFC85029940E73003CBB1F /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8AFFC81729940D43003CBB1F /* Project object */;
 }
