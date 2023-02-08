@@ -41,7 +41,7 @@ struct MainApp: ReducerProtocol {
             case .binding:
                 return .none
                 
-            case .pinScreen(.unlock):
+            case .pinScreen(.didUnlock):
                 state.pinScreen = nil
                 return .none
                 
