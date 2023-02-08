@@ -17,7 +17,8 @@
 		8AFFC84F29940D89003CBB1F /* GridViewFeature+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFFC84E29940D89003CBB1F /* GridViewFeature+View.swift */; };
 		8AFFC85229940E73003CBB1F /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 8AFFC85129940E73003CBB1F /* ComposableArchitecture */; };
 		8AFFC85429941BB1003CBB1F /* GridViewFeature+Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFFC85329941BB1003CBB1F /* GridViewFeature+Mocks.swift */; };
-		8AFFC85629941BE8003CBB1F /* GridViewFeature+Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFFC85529941BE8003CBB1F /* GridViewFeature+Models.swift */; };
+		8AFFC85829941CB4003CBB1F /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFFC85729941CB4003CBB1F /* APIClient.swift */; };
+		8AFFC85A2994410C003CBB1F /* RemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFFC8592994410C003CBB1F /* RemoteImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +51,8 @@
 		8AFFC83F29940D44003CBB1F /* MiniKeepsafeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniKeepsafeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		8AFFC84E29940D89003CBB1F /* GridViewFeature+View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GridViewFeature+View.swift"; sourceTree = "<group>"; };
 		8AFFC85329941BB1003CBB1F /* GridViewFeature+Mocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GridViewFeature+Mocks.swift"; sourceTree = "<group>"; };
-		8AFFC85529941BE8003CBB1F /* GridViewFeature+Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GridViewFeature+Models.swift"; sourceTree = "<group>"; };
+		8AFFC85729941CB4003CBB1F /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		8AFFC8592994410C003CBB1F /* RemoteImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,10 +107,11 @@
 				8AFFC82229940D43003CBB1F /* MiniKeepsafeApp.swift */,
 				8AFFC82429940D43003CBB1F /* ContentView.swift */,
 				8AFFC84E29940D89003CBB1F /* GridViewFeature+View.swift */,
-				8AFFC85529941BE8003CBB1F /* GridViewFeature+Models.swift */,
 				8AFFC85329941BB1003CBB1F /* GridViewFeature+Mocks.swift */,
 				8AFFC82629940D44003CBB1F /* Assets.xcassets */,
 				8AFFC82829940D44003CBB1F /* Preview Content */,
+				8AFFC85729941CB4003CBB1F /* APIClient.swift */,
+				8AFFC8592994410C003CBB1F /* RemoteImage.swift */,
 			);
 			path = MiniKeepsafe;
 			sourceTree = "<group>";
@@ -276,9 +279,10 @@
 			files = (
 				8AFFC82529940D43003CBB1F /* ContentView.swift in Sources */,
 				8AFFC84F29940D89003CBB1F /* GridViewFeature+View.swift in Sources */,
+				8AFFC85A2994410C003CBB1F /* RemoteImage.swift in Sources */,
 				8AFFC82329940D43003CBB1F /* MiniKeepsafeApp.swift in Sources */,
 				8AFFC85429941BB1003CBB1F /* GridViewFeature+Mocks.swift in Sources */,
-				8AFFC85629941BE8003CBB1F /* GridViewFeature+Models.swift in Sources */,
+				8AFFC85829941CB4003CBB1F /* APIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
