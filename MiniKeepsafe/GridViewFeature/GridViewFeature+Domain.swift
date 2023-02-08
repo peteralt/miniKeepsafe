@@ -7,8 +7,14 @@ struct GridViewFeature: ReducerProtocol {
     
     struct State: Equatable {
         var images: IdentifiedArrayOf<RemoteImage> = []
+        
+        /// Displays a loading state indicator at the end of the list of images
         var isLoading: Bool = false
+        
+        /// Holds paging information
         var currentPage: Int = 1
+        
+        /// Constant to define how many images should be loaded per page.
         let imageLimit: Int = 10
     }
     
@@ -33,7 +39,6 @@ struct GridViewFeature: ReducerProtocol {
             state.images.append(contentsOf: images)
             state.currentPage += 1
             state.isLoading = false
-            print("count: \(state.images.count)")
             return .none
             
         case let .images(.failure(error)):
