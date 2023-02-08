@@ -7,7 +7,6 @@ struct MainApp: ReducerProtocol {
         var gridViewer: GridViewFeature.State = .init()
         
         var pinScreen: PinScreenFeature.State?
-        @BindingState var isPresentingPinScreen: Bool = true
     }
     
     enum Action: BindableAction, Equatable {
@@ -29,13 +28,11 @@ struct MainApp: ReducerProtocol {
         Reduce { state, action in
             switch action {
             case .appResumed:
-                state.isPresentingPinScreen = true
                 state.pinScreen = .init()
                 return .none
                 
             case .appBackgrounded:
                 state.pinScreen = .init()
-                state.isPresentingPinScreen = true
                 return .none
                 
             case .gridViewer:
@@ -46,7 +43,6 @@ struct MainApp: ReducerProtocol {
                 
             case .pinScreen(.unlock):
                 state.pinScreen = nil
-                state.isPresentingPinScreen = false
                 return .none
                 
             case .pinScreen:
@@ -69,22 +65,26 @@ struct MiniKeepsafeApp: App {
     var body: some Scene {
         WindowGroup {
             WithViewStore(store, observe: { $0 }) { viewStore in
-                GridViewFeature_View(
-                    store: store.scope(
-                        state: \.gridViewer,
-                        action: MainApp.Action.gridViewer
+                ZStack {
+                    GridViewFeature_View(
+                        store: store.scope(
+                            state: \.gridViewer,
+                            action: MainApp.Action.gridViewer
+                        )
                     )
-                )
-                .fullScreenCover(
-                    isPresented: viewStore.binding(\.$isPresentingPinScreen)) {
-                        IfLetStore(
-                            store.scope(
-                                state: \.pinScreen,
-                                action: MainApp.Action.pinScreen),
-                            then: {
-                                PinScreenFeature_View(store: $0)
-                            })
-                    }
+                    
+                    IfLetStore(
+                        store.scope(
+                            state: \.pinScreen,
+                            action: MainApp.Action.pinScreen),
+                        then: { scopedStore in
+                            Color.white
+                                .edgesIgnoringSafeArea(.all)
+                                .overlay {
+                                    PinScreenFeature_View(store: scopedStore)
+                                }
+                        })
+                }
             }
             .onChange(of: scenePhase) { (newScenePhase) in
                 let viewStore = ViewStore(store)
