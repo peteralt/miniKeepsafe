@@ -32,7 +32,7 @@ extension FullscreenViewerFeature.State {
     
     static var sample: Self {
         .init(
-            images: .init(sampleImages),
+            images: .init(uniqueElements: sampleImages),
             selectedImage: sampleImages.first!
         )
     }
