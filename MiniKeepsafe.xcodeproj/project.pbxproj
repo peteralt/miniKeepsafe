@@ -111,12 +111,12 @@
 			children = (
 				8AFFC86829944F25003CBB1F /* PinScreenFeature */,
 				8AFFC8612994438F003CBB1F /* FullscreenViewerFeature */,
-				8AFFC85E299441B3003CBB1F /* Assets */,
+				8AFFC85B29944190003CBB1F /* GridViewFeature */,
 				8AFFC85D299441A6003CBB1F /* Models */,
 				8AFFC85C2994419C003CBB1F /* APIClient */,
-				8AFFC85B29944190003CBB1F /* GridViewFeature */,
 				8AFFC82229940D43003CBB1F /* MiniKeepsafeApp.swift */,
 				8AFFC82829940D44003CBB1F /* Preview Content */,
+				8AFFC85E299441B3003CBB1F /* Assets */,
 			);
 			path = MiniKeepsafe;
 			sourceTree = "<group>";
