@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		8AFFC82329940D43003CBB1F /* MiniKeepsafeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFFC82229940D43003CBB1F /* MiniKeepsafeApp.swift */; };
-		8AFFC82529940D43003CBB1F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFFC82429940D43003CBB1F /* ContentView.swift */; };
 		8AFFC82729940D44003CBB1F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AFFC82629940D44003CBB1F /* Assets.xcassets */; };
 		8AFFC82A29940D44003CBB1F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AFFC82929940D44003CBB1F /* Preview Assets.xcassets */; };
 		8AFFC83429940D44003CBB1F /* MiniKeepsafeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFFC83329940D44003CBB1F /* MiniKeepsafeTests.swift */; };
@@ -41,7 +40,6 @@
 /* Begin PBXFileReference section */
 		8AFFC81F29940D43003CBB1F /* MiniKeepsafe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiniKeepsafe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AFFC82229940D43003CBB1F /* MiniKeepsafeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniKeepsafeApp.swift; sourceTree = "<group>"; };
-		8AFFC82429940D43003CBB1F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8AFFC82629940D44003CBB1F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8AFFC82929940D44003CBB1F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8AFFC82F29940D44003CBB1F /* MiniKeepsafeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MiniKeepsafeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -104,14 +102,12 @@
 		8AFFC82129940D43003CBB1F /* MiniKeepsafe */ = {
 			isa = PBXGroup;
 			children = (
+				8AFFC85E299441B3003CBB1F /* Assets */,
+				8AFFC85D299441A6003CBB1F /* Models */,
+				8AFFC85C2994419C003CBB1F /* APIClient */,
+				8AFFC85B29944190003CBB1F /* GridViewFeature */,
 				8AFFC82229940D43003CBB1F /* MiniKeepsafeApp.swift */,
-				8AFFC82429940D43003CBB1F /* ContentView.swift */,
-				8AFFC84E29940D89003CBB1F /* GridViewFeature+View.swift */,
-				8AFFC85329941BB1003CBB1F /* GridViewFeature+Mocks.swift */,
-				8AFFC82629940D44003CBB1F /* Assets.xcassets */,
 				8AFFC82829940D44003CBB1F /* Preview Content */,
-				8AFFC85729941CB4003CBB1F /* APIClient.swift */,
-				8AFFC8592994410C003CBB1F /* RemoteImage.swift */,
 			);
 			path = MiniKeepsafe;
 			sourceTree = "<group>";
@@ -139,6 +135,39 @@
 				8AFFC83F29940D44003CBB1F /* MiniKeepsafeUITestsLaunchTests.swift */,
 			);
 			path = MiniKeepsafeUITests;
+			sourceTree = "<group>";
+		};
+		8AFFC85B29944190003CBB1F /* GridViewFeature */ = {
+			isa = PBXGroup;
+			children = (
+				8AFFC84E29940D89003CBB1F /* GridViewFeature+View.swift */,
+				8AFFC85329941BB1003CBB1F /* GridViewFeature+Mocks.swift */,
+			);
+			path = GridViewFeature;
+			sourceTree = "<group>";
+		};
+		8AFFC85C2994419C003CBB1F /* APIClient */ = {
+			isa = PBXGroup;
+			children = (
+				8AFFC85729941CB4003CBB1F /* APIClient.swift */,
+			);
+			path = APIClient;
+			sourceTree = "<group>";
+		};
+		8AFFC85D299441A6003CBB1F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8AFFC8592994410C003CBB1F /* RemoteImage.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8AFFC85E299441B3003CBB1F /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				8AFFC82629940D44003CBB1F /* Assets.xcassets */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,7 +306,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8AFFC82529940D43003CBB1F /* ContentView.swift in Sources */,
 				8AFFC84F29940D89003CBB1F /* GridViewFeature+View.swift in Sources */,
 				8AFFC85A2994410C003CBB1F /* RemoteImage.swift in Sources */,
 				8AFFC82329940D43003CBB1F /* MiniKeepsafeApp.swift in Sources */,
