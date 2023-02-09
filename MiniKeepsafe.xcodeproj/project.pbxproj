@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8A1180672995603300B8EFD0 /* PinScreenFeature in Frameworks */ = {isa = PBXBuildFile; productRef = 8A1180662995603300B8EFD0 /* PinScreenFeature */; };
 		8AFFC82329940D43003CBB1F /* MiniKeepsafeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFFC82229940D43003CBB1F /* MiniKeepsafeApp.swift */; };
 		8AFFC82729940D44003CBB1F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AFFC82629940D44003CBB1F /* Assets.xcassets */; };
 		8AFFC82A29940D44003CBB1F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AFFC82929940D44003CBB1F /* Preview Assets.xcassets */; };
@@ -59,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A1180672995603300B8EFD0 /* PinScreenFeature in Frameworks */,
 				8AFFC875299460DE003CBB1F /* Kingfisher in Frameworks */,
 				8AFFC85229940E73003CBB1F /* ComposableArchitecture in Frameworks */,
 			);
@@ -75,6 +77,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8A1180652995603300B8EFD0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8AFFC81629940D43003CBB1F = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +92,7 @@
 				8AFFC82129940D43003CBB1F /* MiniKeepsafe */,
 				8AFFC83229940D44003CBB1F /* MiniKeepsafeTests */,
 				8AFFC82029940D43003CBB1F /* Products */,
+				8A1180652995603300B8EFD0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -188,6 +198,7 @@
 			packageProductDependencies = (
 				8AFFC85129940E73003CBB1F /* ComposableArchitecture */,
 				8AFFC874299460DE003CBB1F /* Kingfisher */,
+				8A1180662995603300B8EFD0 /* PinScreenFeature */,
 			);
 			productName = MiniKeepsafe;
 			productReference = 8AFFC81F29940D43003CBB1F /* MiniKeepsafe.app */;
@@ -581,6 +592,10 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		8A1180662995603300B8EFD0 /* PinScreenFeature */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = PinScreenFeature;
+		};
 		8AFFC85129940E73003CBB1F /* ComposableArchitecture */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 8AFFC85029940E73003CBB1F /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
