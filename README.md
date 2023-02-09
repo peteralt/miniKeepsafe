@@ -1,4 +1,4 @@
-# MiniKeepSafe
+# MiniKeepsafe
 
 This is a small sample project that highlights how The Composable Architecture (TCA) allows to create nicely decoupled features, allowing the application to scale and providing guard rails to properly test features.
 
