@@ -2,7 +2,6 @@ import ComposableArchitecture
 import Kingfisher
 import SwiftUI
 
-
 struct GridViewFeature_View: View {
     let store: StoreOf<GridViewFeature>
     

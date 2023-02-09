@@ -1,5 +1,6 @@
 import ComposableArchitecture
 import Foundation
+import Kingfisher
 import SwiftUI
 
 struct FullscreenViewer_View: View {
@@ -10,26 +11,11 @@ struct FullscreenViewer_View: View {
             NavigationView {
                 TabView(selection: viewStore.binding(\.$selectedImage)) {
                     ForEach(viewStore.images) { image in
-                        // I'm purposefully leaving AsyncImage in here for the time being
-                        // just to show how this would work natively. As an interim step
-                        // I would like to swap this out with the KingFisher library so
-                        // we can make use of the caching provided by the library, but
-                        // in the long term we want our own caching layer.
-                        AsyncImage(url: image.url) { phase in
-                            switch phase {
-                            case .empty:
-                                ProgressView()
-                                    .progressViewStyle(CircularProgressViewStyle(tint: Color.white))
-                            case .success(let image):
-                                image
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                            case .failure:
-                                Image(systemName: "photo")
-                            @unknown default:
-                                EmptyView()
-                            }
-                        }
+                        KFImage
+                            .url(image.url)
+                            .resizable()
+                            .cacheOriginalImage()
+                            .aspectRatio(contentMode: .fit)
                         .tag(image)
                     }
                 }
