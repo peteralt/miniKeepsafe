@@ -25,6 +25,7 @@
 		8AFFC875299460DE003CBB1F /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 8AFFC874299460DE003CBB1F /* Kingfisher */; };
 		8AFFC87729948AF7003CBB1F /* PinScreenFeatureSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFFC87629948AF7003CBB1F /* PinScreenFeatureSnapshotTests.swift */; };
 		8AFFC87A29948B3C003CBB1F /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = 8AFFC87929948B3C003CBB1F /* SnapshotTesting */; };
+		8AFFC87C299491DD003CBB1F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 8AFFC87B299491DD003CBB1F /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		8AFFC86929944F36003CBB1F /* PinScreenFeature+View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PinScreenFeature+View.swift"; sourceTree = "<group>"; };
 		8AFFC86B29945857003CBB1F /* PinScreenFeature+Domain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PinScreenFeature+Domain.swift"; sourceTree = "<group>"; };
 		8AFFC87629948AF7003CBB1F /* PinScreenFeatureSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinScreenFeatureSnapshotTests.swift; sourceTree = "<group>"; };
+		8AFFC87B299491DD003CBB1F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 		8AFFC81629940D43003CBB1F = {
 			isa = PBXGroup;
 			children = (
+				8AFFC87B299491DD003CBB1F /* README.md */,
 				8AFFC82129940D43003CBB1F /* MiniKeepsafe */,
 				8AFFC83229940D44003CBB1F /* MiniKeepsafeTests */,
 				8AFFC82029940D43003CBB1F /* Products */,
@@ -274,6 +277,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AFFC87C299491DD003CBB1F /* README.md in Resources */,
 				8AFFC82A29940D44003CBB1F /* Preview Assets.xcassets in Resources */,
 				8AFFC82729940D44003CBB1F /* Assets.xcassets in Resources */,
 			);
