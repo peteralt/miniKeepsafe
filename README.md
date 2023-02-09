@@ -24,3 +24,4 @@ This project is limited in scope due to the nature of the time limit set for thi
 * We're using KingFisher to perform the image loading and caching. Using the native `AsyncImage` resulted in performance and rendering issues. It's currently not cohesive that we're using KingFisher in the grid feature, but not in the full screen feature. This is something to tackle in the next round. Ideally, we would want some prefetching that gets the list of images ahead of time while we're scrolling and we might want to maintain our own caching layer eventually to have more control over it.
 * The full screen viewer does not load additional images if the end of the list is reached
 * The full screen viewer also does not allow for pinch and zoom gestures
+* The individual features are within the main app target and not in separate Swift Package Manager modules.
