@@ -2,6 +2,8 @@
 
 This is a small sample project that highlights how [The Composable Architecture](https://github.com/pointfreeco/swift-composable-architecture) (TCA) allows to create nicely decoupled features, allowing the application to scale and providing guard rails to properly test features.
 
+For this purpose, the `PinScreenFeature` has been moved into a separate SPM package, to showcase how features can be built and tested in isolation and then pulled into the main project. For large code-bases, this saves a lot of compile time - engineers can work on their feature without having to compile analytic clients, database clients and other heavy-weight dependencies.
+
 The hard coded PIN is `123`
 
 ## Requirements
@@ -25,4 +27,3 @@ This project is limited in scope due to the nature of the time limit set for thi
 * Ideally, we would want some prefetching that gets the list of images ahead of time while we're scrolling and we might want to maintain our own caching layer eventually to have more control over it.
 * The full screen viewer does not load additional images if the end of the list is reached
 * The full screen viewer also does not allow for pinch and zoom gestures
-* The individual features are within the main app target and not in separate Swift Package Manager modules.
