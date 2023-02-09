@@ -1,4 +1,5 @@
 import ComposableArchitecture
+import Kingfisher
 import SwiftUI
 
 
@@ -11,6 +12,9 @@ struct GridViewFeature_View: View {
         GridItem(.flexible(), spacing: 0)
     ]
     
+    private let processor = DownsamplingImageProcessor(size: .init(width: 200, height: 200))
+    |> ResizingImageProcessor(referenceSize: .init(width: 150, height: 150), mode: .aspectFill)
+    
     var body: some View {
         WithViewStore(self.store, observe: { $0 }) { viewStore in
             ScrollView {
@@ -19,43 +23,21 @@ struct GridViewFeature_View: View {
                         Button(action: {
                             viewStore.send(.didSelectImage(image))
                         }) {
-                            AsyncImage(url: image.url) { phase in
-                                switch phase {
-                                case .empty:
-                                    RoundedRectangle(cornerRadius: 12)
-                                        .fill(Color.purple)
-                                        .border(Color.orange)
-                                        .aspectRatio(contentMode: .fill)
-                                case .success(let image):
-                                    RoundedRectangle(cornerRadius: 12)
-                                        .fill(Color.green)
-                                        .border(Color.orange)
-                                        .aspectRatio(contentMode: .fill)
-                                    //                                    .frame(maxWidth: 100, maxHeight: 100)
-                                    //                                image
-                                    //                                    .resizable()
-                                    //                                    .aspectRatio(contentMode: .fill)
-                                    //                                    .padding(1)
-                                    //                                    .frame(maxWidth: 100, maxHeight: 100)
-                                case .failure:
-                                    Image(systemName: "photo")
-                                @unknown default:
-                                    // Since the AsyncImagePhase enum isn't frozen,
-                                    // we need to add this currently unused fallback
-                                    // to handle any new cases that might be added
-                                    // in the future:
-                                    EmptyView()
+                            RoundedRectangle(cornerRadius: 12)
+                                .aspectRatio(contentMode: .fill)
+                                .overlay {
+                                    KFImage
+                                        .url(image.url)
+                                        .setProcessor(processor)
+                                        .cacheOriginalImage()
                                 }
-                            }
-                            .aspectRatio(contentMode: .fill)
-                            //                        .frame(minWidth: 100, minHeight: 100)
-                            .background(Color.red)
-                            .onAppear {
-                                if viewStore.images.last == image {
-                                    viewStore.send(.didReachEndOfList)
+                                .onAppear {
+                                    if viewStore.images.last == image {
+                                        viewStore.send(.didReachEndOfList)
+                                    }
                                 }
-                            }
                         }
+                        .clipped()
                     }
                 }
                 if viewStore.isLoading {
