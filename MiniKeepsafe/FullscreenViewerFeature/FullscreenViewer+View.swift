@@ -30,8 +30,8 @@ struct FullscreenViewer_View: View {
                 }
                 .background(Color.black)
                 .toolbar() {
-                    ToolbarItem(placement: .navigation) {
-                        Button("Back") {
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        Button("Done") {
                             viewStore.send(.didTapBack)
                         }
                     }

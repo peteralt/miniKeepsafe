@@ -17,46 +17,47 @@ struct GridViewFeature_View: View {
     
     var body: some View {
         WithViewStore(self.store, observe: { $0 }) { viewStore in
-            ScrollView {
-                LazyVGrid(columns: columns, spacing: 0) {
-                    ForEach(viewStore.images) { image in
-                        Button(action: {
-                            viewStore.send(.didSelectImage(image))
-                        }) {
-                            RoundedRectangle(cornerRadius: 12)
-                                .aspectRatio(contentMode: .fill)
-                                .overlay {
-                                    KFImage
-                                        .url(image.url)
-                                        .setProcessor(processor)
-                                        .cacheOriginalImage()
-                                }
-                                .onAppear {
-                                    if viewStore.images.last == image {
-                                        viewStore.send(.didReachEndOfList)
+            ZStack {
+                ScrollView {
+                    LazyVGrid(columns: columns, spacing: 0) {
+                        ForEach(viewStore.images) { image in
+                            Button(action: {
+                                viewStore.send(.didSelectImage(image))
+                            }) {
+                                RoundedRectangle(cornerRadius: 12)
+                                    .fill(Color.clear)
+                                    .aspectRatio(contentMode: .fill)
+                                    .overlay {
+                                        KFImage
+                                            .url(image.url)
+                                            .setProcessor(processor)
+                                            .cacheOriginalImage()
                                     }
-                                }
+                                    .onAppear {
+                                        if viewStore.images.last == image {
+                                            viewStore.send(.didReachEndOfList)
+                                        }
+                                    }
+                            }
+                            .clipped()
                         }
-                        .clipped()
+                    }
+                    if viewStore.isLoading {
+                        ProgressView()
                     }
                 }
-                if viewStore.isLoading {
-                    ProgressView()
-                }
+                
+                IfLetStore(
+                    store.scope(
+                        state: \.fullscreenState,
+                        action: GridViewFeature.Action.fullscreenFeature),
+                    then: {
+                        FullscreenViewer_View(store: $0)
+                    })
             }
-            .fullScreenCover(
-                isPresented: viewStore.binding(\.$isFullscreenViewerPresented)) {
-                    IfLetStore(
-                        store.scope(
-                            state: \.fullscreenState,
-                            action: GridViewFeature.Action.fullscreenFeature),
-                        then: {
-                            FullscreenViewer_View(store: $0)
-                        })
-                }
-                .onAppear {
-                    viewStore.send(.didAppear)
-                }
+            .onAppear {
+                viewStore.send(.didAppear)
+            }
         }
     }
 }

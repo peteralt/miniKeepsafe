@@ -19,14 +19,10 @@ struct GridViewFeature: ReducerProtocol {
         
         /// Optional state for the FullscreenViewerFeature
         var fullscreenState: FullscreenViewerFeature.State?
-        
-        /// Handles full screen overlay display
-        @BindingState var isFullscreenViewerPresented: Bool = false
     }
     
-    enum Action: BindableAction, Equatable {
+    enum Action: Equatable {
         case didAppear
-        case binding(BindingAction<State>)
         case didReachEndOfList
         case images(TaskResult<[RemoteImage]>)
         case didSelectImage(RemoteImage)
@@ -34,12 +30,9 @@ struct GridViewFeature: ReducerProtocol {
     }
     
     var body: some ReducerProtocol<State, Action> {
-        BindingReducer()
         Reduce { state, action in
             switch action {
-            case .binding:
-                return .none
-                
+
             case .didAppear:
                 state.isLoading = true
                 state.currentPage = 1
@@ -72,7 +65,6 @@ struct GridViewFeature: ReducerProtocol {
                 return .none
                 
             case let .didSelectImage(image):
-                state.isFullscreenViewerPresented = true
                 state.fullscreenState = .init(images: state.images, selectedImage: image)
                 return .none
                 
@@ -81,7 +73,6 @@ struct GridViewFeature: ReducerProtocol {
                 
             case .fullscreenFeature(.didTapBack):
                 state.fullscreenState = nil
-                state.isFullscreenViewerPresented = false
                 return .none
                 
             case .fullscreenFeature:
