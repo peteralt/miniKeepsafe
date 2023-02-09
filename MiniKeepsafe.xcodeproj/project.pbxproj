@@ -20,10 +20,7 @@
 		8AFFC863299443A7003CBB1F /* FullscreenViewer+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFFC862299443A7003CBB1F /* FullscreenViewer+View.swift */; };
 		8AFFC865299444F7003CBB1F /* FullscreenViewer+Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFFC864299444F7003CBB1F /* FullscreenViewer+Mocks.swift */; };
 		8AFFC86729944CA8003CBB1F /* FullscreenViewerFeature+Domain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFFC86629944CA8003CBB1F /* FullscreenViewerFeature+Domain.swift */; };
-		8AFFC86A29944F36003CBB1F /* PinScreenFeature+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFFC86929944F36003CBB1F /* PinScreenFeature+View.swift */; };
-		8AFFC86C29945857003CBB1F /* PinScreenFeature+Domain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFFC86B29945857003CBB1F /* PinScreenFeature+Domain.swift */; };
 		8AFFC875299460DE003CBB1F /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 8AFFC874299460DE003CBB1F /* Kingfisher */; };
-		8AFFC87729948AF7003CBB1F /* PinScreenFeatureSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFFC87629948AF7003CBB1F /* PinScreenFeatureSnapshotTests.swift */; };
 		8AFFC87A29948B3C003CBB1F /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = 8AFFC87929948B3C003CBB1F /* SnapshotTesting */; };
 		8AFFC87C299491DD003CBB1F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 8AFFC87B299491DD003CBB1F /* README.md */; };
 /* End PBXBuildFile section */
@@ -39,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8A0C560929955A9500C8A34C /* Packages */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Packages; sourceTree = "<group>"; };
 		8AFFC81F29940D43003CBB1F /* MiniKeepsafe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiniKeepsafe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AFFC82229940D43003CBB1F /* MiniKeepsafeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniKeepsafeApp.swift; sourceTree = "<group>"; };
 		8AFFC82629940D44003CBB1F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -53,9 +51,6 @@
 		8AFFC862299443A7003CBB1F /* FullscreenViewer+View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FullscreenViewer+View.swift"; sourceTree = "<group>"; };
 		8AFFC864299444F7003CBB1F /* FullscreenViewer+Mocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FullscreenViewer+Mocks.swift"; sourceTree = "<group>"; };
 		8AFFC86629944CA8003CBB1F /* FullscreenViewerFeature+Domain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FullscreenViewerFeature+Domain.swift"; sourceTree = "<group>"; };
-		8AFFC86929944F36003CBB1F /* PinScreenFeature+View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PinScreenFeature+View.swift"; sourceTree = "<group>"; };
-		8AFFC86B29945857003CBB1F /* PinScreenFeature+Domain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PinScreenFeature+Domain.swift"; sourceTree = "<group>"; };
-		8AFFC87629948AF7003CBB1F /* PinScreenFeatureSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinScreenFeatureSnapshotTests.swift; sourceTree = "<group>"; };
 		8AFFC87B299491DD003CBB1F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -83,6 +78,7 @@
 		8AFFC81629940D43003CBB1F = {
 			isa = PBXGroup;
 			children = (
+				8A0C560929955A9500C8A34C /* Packages */,
 				8AFFC87B299491DD003CBB1F /* README.md */,
 				8AFFC82129940D43003CBB1F /* MiniKeepsafe */,
 				8AFFC83229940D44003CBB1F /* MiniKeepsafeTests */,
@@ -102,7 +98,6 @@
 		8AFFC82129940D43003CBB1F /* MiniKeepsafe */ = {
 			isa = PBXGroup;
 			children = (
-				8AFFC86829944F25003CBB1F /* PinScreenFeature */,
 				8AFFC8612994438F003CBB1F /* FullscreenViewerFeature */,
 				8AFFC85B29944190003CBB1F /* GridViewFeature */,
 				8AFFC85D299441A6003CBB1F /* Models */,
@@ -126,7 +121,6 @@
 			isa = PBXGroup;
 			children = (
 				8AFFC83329940D44003CBB1F /* MiniKeepsafeAppTests.swift */,
-				8AFFC87629948AF7003CBB1F /* PinScreenFeatureSnapshotTests.swift */,
 			);
 			path = MiniKeepsafeTests;
 			sourceTree = "<group>";
@@ -173,15 +167,6 @@
 				8AFFC864299444F7003CBB1F /* FullscreenViewer+Mocks.swift */,
 			);
 			path = FullscreenViewerFeature;
-			sourceTree = "<group>";
-		};
-		8AFFC86829944F25003CBB1F /* PinScreenFeature */ = {
-			isa = PBXGroup;
-			children = (
-				8AFFC86929944F36003CBB1F /* PinScreenFeature+View.swift */,
-				8AFFC86B29945857003CBB1F /* PinScreenFeature+Domain.swift */,
-			);
-			path = PinScreenFeature;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -302,10 +287,8 @@
 				8AFFC82329940D43003CBB1F /* MiniKeepsafeApp.swift in Sources */,
 				8AFFC85429941BB1003CBB1F /* GridViewFeature+Mocks.swift in Sources */,
 				8AFFC865299444F7003CBB1F /* FullscreenViewer+Mocks.swift in Sources */,
-				8AFFC86A29944F36003CBB1F /* PinScreenFeature+View.swift in Sources */,
 				8AFFC85829941CB4003CBB1F /* APIClient.swift in Sources */,
 				8AFFC8602994420C003CBB1F /* GridViewFeature+Domain.swift in Sources */,
-				8AFFC86C29945857003CBB1F /* PinScreenFeature+Domain.swift in Sources */,
 				8AFFC863299443A7003CBB1F /* FullscreenViewer+View.swift in Sources */,
 				8AFFC86729944CA8003CBB1F /* FullscreenViewerFeature+Domain.swift in Sources */,
 			);
@@ -315,7 +298,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8AFFC87729948AF7003CBB1F /* PinScreenFeatureSnapshotTests.swift in Sources */,
 				8AFFC83429940D44003CBB1F /* MiniKeepsafeAppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -381,7 +363,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -435,7 +417,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

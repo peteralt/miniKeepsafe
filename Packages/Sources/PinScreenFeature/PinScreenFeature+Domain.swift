@@ -1,17 +1,23 @@
 import ComposableArchitecture
 
-struct PinScreenFeature: ReducerProtocol {
-    struct State: Equatable {
+public struct PinScreenFeature: ReducerProtocol {
+    public struct State: Equatable {
         var currentInput: String = ""
+        
+        public init(currentInput: String = "") {
+            self.currentInput = currentInput
+        }
     }
     
-    enum Action: Equatable {
+    public enum Action: Equatable {
         case didTapDigit(Int)
         case didUnlock
         case didTapCorrect
     }
     
-    var body: some ReducerProtocol<State, Action> {
+    public init() {}
+    
+    public var body: some ReducerProtocol<State, Action> {
         Reduce { state, action in
             switch action {
             case let .didTapDigit(digit):

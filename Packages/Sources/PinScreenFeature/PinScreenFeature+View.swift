@@ -1,8 +1,7 @@
 import ComposableArchitecture
 import SwiftUI
 
-
-struct PinScreenFeature_View: View {
+public struct PinScreenFeature_View: View {
     let store: StoreOf<PinScreenFeature>
     
     private let columns = [
@@ -11,7 +10,11 @@ struct PinScreenFeature_View: View {
         GridItem(.flexible())
     ]
     
-    var body: some View {
+    public init(store: StoreOf<PinScreenFeature>) {
+        self.store = store
+    }
+    
+    public var body: some View {
         WithViewStore(self.store, observe: { $0 }) { viewStore in
             VStack {
                 Spacer()

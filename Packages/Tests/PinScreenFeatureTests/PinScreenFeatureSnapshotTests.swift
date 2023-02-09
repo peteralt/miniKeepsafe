@@ -1,10 +1,9 @@
 import ComposableArchitecture
 import SnapshotTesting
 import XCTest
-@testable import MiniKeepsafe
+@testable import PinScreenFeature
 
-final class PinScreenFeatureSnapshotTests: XCTestCase {
-    
+final class PackagesTests: XCTestCase {
     /*
      A simple example how snapshot tests can provide us some guidance around
      how a view is getting rendered. This is a very basic example, but it shows
@@ -23,5 +22,4 @@ final class PinScreenFeatureSnapshotTests: XCTestCase {
         
         assertSnapshot(matching: view, as: .image(layout: .device(config: deviceImage)))
     }
-
 }
