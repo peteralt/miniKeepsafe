@@ -1,5 +1,6 @@
 import ComposableArchitecture
 import SwiftUI
+import XCTestDynamicOverlay
 
 struct MainApp: ReducerProtocol {
     
@@ -64,37 +65,39 @@ struct MiniKeepsafeApp: App {
     
     var body: some Scene {
         WindowGroup {
-            WithViewStore(store, observe: { $0 }) { viewStore in
-                ZStack {
-                    GridViewFeature_View(
-                        store: store.scope(
-                            state: \.gridViewer,
-                            action: MainApp.Action.gridViewer
+            if !_XCTIsTesting {
+                WithViewStore(store, observe: { $0 }) { viewStore in
+                    ZStack {
+                        GridViewFeature_View(
+                            store: store.scope(
+                                state: \.gridViewer,
+                                action: MainApp.Action.gridViewer
+                            )
                         )
-                    )
-                    
-                    IfLetStore(
-                        store.scope(
-                            state: \.pinScreen,
-                            action: MainApp.Action.pinScreen),
-                        then: { scopedStore in
-                            Color.white
-                                .edgesIgnoringSafeArea(.all)
-                                .overlay {
-                                    PinScreenFeature_View(store: scopedStore)
-                                }
-                        })
+                        
+                        IfLetStore(
+                            store.scope(
+                                state: \.pinScreen,
+                                action: MainApp.Action.pinScreen),
+                            then: { scopedStore in
+                                Color.white
+                                    .edgesIgnoringSafeArea(.all)
+                                    .overlay {
+                                        PinScreenFeature_View(store: scopedStore)
+                                    }
+                            })
+                    }
                 }
-            }
-            .onChange(of: scenePhase) { (newScenePhase) in
-                let viewStore = ViewStore(store)
-                switch (scenePhase, newScenePhase) {
-                case (.inactive, .active):
-                    viewStore.send(.appResumed)
-                case (.active, .inactive):
-                    viewStore.send(.appBackgrounded)
-                default:
-                    break
+                .onChange(of: scenePhase) { (newScenePhase) in
+                    let viewStore = ViewStore(store)
+                    switch (scenePhase, newScenePhase) {
+                    case (.inactive, .active):
+                        viewStore.send(.appResumed)
+                    case (.active, .inactive):
+                        viewStore.send(.appBackgrounded)
+                    default:
+                        break
+                    }
                 }
             }
         }
