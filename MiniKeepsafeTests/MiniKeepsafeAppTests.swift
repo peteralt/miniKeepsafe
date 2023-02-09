@@ -3,6 +3,12 @@ import XCTest
 @testable import MiniKeepsafe
 
 final class MiniKeepsafeAppTests: XCTestCase {
+    
+    /*
+     These are simple examples to showcase how simple it is to write
+     unit tests with TCA. We're basically testing that sending an action
+     into the store modifies our state as expected.
+     */
 
     @MainActor
     func testAppLockedOnResumeAndUnlocks() async throws {

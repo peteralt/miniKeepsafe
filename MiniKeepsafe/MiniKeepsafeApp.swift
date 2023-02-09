@@ -5,13 +5,14 @@ import XCTestDynamicOverlay
 struct MainApp: ReducerProtocol {
     
     struct State: Equatable {
+        /// This holds the state for our gridViewer feature.
         var gridViewer: GridViewFeature.State = .init()
         
+        /// This holds the optional pin screen feature state. The view will only be displayed when the state is set.
         var pinScreen: PinScreenFeature.State?
     }
     
-    enum Action: BindableAction, Equatable {
-        case binding(BindingAction<State>)
+    enum Action: Equatable {
         case appResumed
         case appBackgrounded
         case gridViewer(GridViewFeature.Action)
@@ -19,12 +20,11 @@ struct MainApp: ReducerProtocol {
     }
     
     var body: some ReducerProtocol<State, Action> {
-        BindingReducer()
-            .ifLet(\.pinScreen, action: /Action.pinScreen) {
-                PinScreenFeature()
-            }
         Scope(state: \.gridViewer, action: /Action.gridViewer) {
             GridViewFeature()
+        }
+        .ifLet(\.pinScreen, action: /Action.pinScreen) {
+            PinScreenFeature()
         }
         Reduce { state, action in
             switch action {
@@ -37,9 +37,6 @@ struct MainApp: ReducerProtocol {
                 return .none
                 
             case .gridViewer:
-                return .none
-                
-            case .binding:
                 return .none
                 
             case .pinScreen(.didUnlock):

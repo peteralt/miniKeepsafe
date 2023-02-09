@@ -28,6 +28,9 @@ struct GridViewFeature_View: View {
                                     .fill(Color.clear)
                                     .aspectRatio(contentMode: .fill)
                                     .overlay {
+                                        // Using KFImage here because the default `AsyncImage` provided by SwiftUI
+                                        // isn't overly performant. In a later cycle
+                                        // we would probably want to control this more.
                                         KFImage
                                             .url(image.url)
                                             .setProcessor(processor)

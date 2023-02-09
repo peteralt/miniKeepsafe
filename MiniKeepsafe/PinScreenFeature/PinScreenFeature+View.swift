@@ -36,6 +36,8 @@ struct PinScreenFeature_View: View {
                 }
                 
                 LazyVGrid(columns: columns, alignment: .center) {
+                    // In order to set the grid up properly, we need a hidden
+                    // button to balance it out.
                     Button("0"){}.padding().hidden()
                     
                     Button("0") {
