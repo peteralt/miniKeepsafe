@@ -16,6 +16,7 @@ The hard coded PIN is `123`
 * [KingFisher](https://github.com/onevcat/Kingfisher) for quick async image loading in caching (see Gotchas for details)
 * [The Composable Architecture (PointFree)](https://github.com/pointfreeco/swift-composable-architecture)
 * [Snapshot Testing (PointFree)](https://github.com/pointfreeco/swift-snapshot-testing)
+* [Tagged (PointFree)](https://github.com/pointfreeco/swift-tagged) to create type-safe identifiers for `RemoteImage`
 
 ## Gotchas
 

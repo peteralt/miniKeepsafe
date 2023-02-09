@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8A1180672995603300B8EFD0 /* PinScreenFeature in Frameworks */ = {isa = PBXBuildFile; productRef = 8A1180662995603300B8EFD0 /* PinScreenFeature */; };
+		8A11806A2995962900B8EFD0 /* Tagged in Frameworks */ = {isa = PBXBuildFile; productRef = 8A1180692995962900B8EFD0 /* Tagged */; };
 		8AFFC82329940D43003CBB1F /* MiniKeepsafeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFFC82229940D43003CBB1F /* MiniKeepsafeApp.swift */; };
 		8AFFC82729940D44003CBB1F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AFFC82629940D44003CBB1F /* Assets.xcassets */; };
 		8AFFC82A29940D44003CBB1F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AFFC82929940D44003CBB1F /* Preview Assets.xcassets */; };
@@ -62,6 +63,7 @@
 			files = (
 				8A1180672995603300B8EFD0 /* PinScreenFeature in Frameworks */,
 				8AFFC875299460DE003CBB1F /* Kingfisher in Frameworks */,
+				8A11806A2995962900B8EFD0 /* Tagged in Frameworks */,
 				8AFFC85229940E73003CBB1F /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -199,6 +201,7 @@
 				8AFFC85129940E73003CBB1F /* ComposableArchitecture */,
 				8AFFC874299460DE003CBB1F /* Kingfisher */,
 				8A1180662995603300B8EFD0 /* PinScreenFeature */,
+				8A1180692995962900B8EFD0 /* Tagged */,
 			);
 			productName = MiniKeepsafe;
 			productReference = 8AFFC81F29940D43003CBB1F /* MiniKeepsafe.app */;
@@ -257,6 +260,7 @@
 				8AFFC85029940E73003CBB1F /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
 				8AFFC873299460DE003CBB1F /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				8AFFC87829948B3B003CBB1F /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */,
+				8A1180682995962900B8EFD0 /* XCRemoteSwiftPackageReference "swift-tagged" */,
 			);
 			productRefGroup = 8AFFC82029940D43003CBB1F /* Products */;
 			projectDirPath = "";
@@ -565,6 +569,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		8A1180682995962900B8EFD0 /* XCRemoteSwiftPackageReference "swift-tagged" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-tagged";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.0;
+			};
+		};
 		8AFFC85029940E73003CBB1F /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture.git";
@@ -595,6 +607,11 @@
 		8A1180662995603300B8EFD0 /* PinScreenFeature */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = PinScreenFeature;
+		};
+		8A1180692995962900B8EFD0 /* Tagged */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8A1180682995962900B8EFD0 /* XCRemoteSwiftPackageReference "swift-tagged" */;
+			productName = Tagged;
 		};
 		8AFFC85129940E73003CBB1F /* ComposableArchitecture */ = {
 			isa = XCSwiftPackageProductDependency;
